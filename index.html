@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins&display=swap" rel="stylesheet">
+
+  <title>E-commerce product page | Test</title>
+</head>
+
+<body>
+  <nav class="nav-main">
+    <div class="menu-btn" onclick="cambiarImagen()">
+      <img id="imagenMenu" src="images/icon-menu.svg" alt="">
+    </div>
+    <a href="#" class="logo">sneakers</a>
+    <ul class="nav-menu">
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="guess">
+      <img id="btncart" src="images/icon-cart.svg" onclick="toggleCart()" alt="cart">
+      <img src="images/image-avatar.png" alt="avatar">
+      <div class="cart-popup" id="cartPopup">
+        <span class="close" onclick="toggleCart()">&times;</span>
+        <h3>Cart</h3><br>
+        <p id="cartMessage">The cart is empty</p>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+  <div class="section-slider">
+    <div class="carousel carousel-main" data-flickity='{ "pageDots": false, "prevNextButtons":false}'>
+      <div class="carousel-cell"><img src="images/image-product-1.jpg" loading="eager" alt="sneaker"></div>
+      <div class="carousel-cell"><img src="images/image-product-2.jpg" loading="lazy" alt="sneaker"></div>
+      <div class="carousel-cell"><img src="images/image-product-3.jpg" loading="lazy" alt="sneaker"></div>
+      <div class="carousel-cell"><img src="images/image-product-4.jpg" loading="lazy" alt="sneaker"></div>
+    </div>
+
+    <div class="carousel carousel-nav"
+      data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false, "prevNextButtons":false }'>
+      <div class="carousel-cell"><img src="images/image-product-1-thumbnail.jpg" loading="eager" alt=""></div>
+      <div class="carousel-cell"><img src="images/image-product-2-thumbnail.jpg" loading="lazy" alt=""></div>
+      <div class="carousel-cell"><img src="images/image-product-3-thumbnail.jpg" loading="lazy" alt=""></div>
+      <div class="carousel-cell"><img src="images/image-product-4-thumbnail.jpg" loading="lazy" alt=""></div>
+    </div>
+  </div>
+
+  <div class="section-information">
+    <div class="information">
+      <div class="information-txt">
+        <h3>Sneaker Company</h3>
+        <h2>Fall Limited Edition Sneakers</h2><br>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      </div><br>
+      <div class="information-price">
+        <span class="price">$125.00</span>
+        <span class="discount">50%</span>
+        <span class="price-without ">$250.00</span>
+      </div><br>
+      <div class="section-buttons">
+        <div class="amount">
+          <img class="minus-btn" src="images/icon-minus.svg" alt="minus">
+          <p>0</p>
+          <img class="plus-btn" src="images/icon-plus.svg" alt="plus">
+        </div><br>
+        <button class="add-cart"> Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</body>
+</html>
